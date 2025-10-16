@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BGEN 75 - Week 4: Embryonic Patterning</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar-top">
+    <!-- Navigation Bar -->
+    <nav id="navbar-top" class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">BGEN 75 - Week 4</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#part1">Part 1: Gastrulation & Neurulation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#part2">Part 2: Induction & Morphogens</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#part3">Part 3: Application</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <!-- Header -->
+        <header class="text-center mb-5 p-4 bg-light rounded">
+            <h1>Embryonic Patterning and Morphogenesis</h1>
+            <p class="lead">The journey from a simple ball of cells to a complex, patterned embryo.</p>
+        </header>
+
+        <!-- PART 1: Gastrulation & Neurulation -->
+        <section id="part1" class="module-section">
+            <h2>Part 1: The Great Reshuffling - Gastrulation & Neurulation</h2>
+            
+            <!-- Germ Layers Interactive Diagram -->
+            <div class="card my-4">
+                <div class="card-header">
+                    <h5>The Three Germ Layers</h5>
+                </div>
+                <div class="card-body">
+                    <p>Click on each germ layer to see what tissues it forms.</p>
+                    <div class="row text-center">
+                        <!-- Ectoderm -->
+                        <div class="col-md-4">
+                            <div class="interactive-box ectoderm" onclick="showFates('ectoderm')">
+                                <strong>Ectoderm</strong>
+                            </div>
+                            <div id="ectoderm-fates" class="fates-list mt-2" style="display: none;">
+                                <ul class="list-group">
+                                    <li class="list-group-item">Skin Epidermis</li>
+                                    <li class="list-group-item">Nervous System</li>
+                                    <li class="list-group-item">Neural Crest</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Mesoderm -->
+                        <div class="col-md-4">
+                            <div class="interactive-box mesoderm" onclick="showFates('mesoderm')">
+                                <strong>Mesoderm</strong>
+                            </div>
+                            <div id="mesoderm-fates" class="fates-list mt-2" style="display: none;">
+                                <ul class="list-group">
+                                    <li class="list-group-item">Muscle & Bone</li>
+                                    <li class="list-group-item">Circulatory System</li>
+                                    <li class="list-group-item">Kidneys</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Endoderm -->
+                        <div class="col-md-4">
+                            <div class="interactive-box endoderm" onclick="showFates('endoderm')">
+                                <strong>Endoderm</strong>
+                            </div>
+                            <div id="endoderm-fates" class="fates-list mt-2" style="display: none;">
+                                <ul class="list-group">
+                                    <li class="list-group-item">Gut Lining</li>
+                                    <li class="list-group-item">Lungs</li>
+                                    <li class="list-group-item">Liver & Pancreas</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cell Movements -->
+            <div class="card my-4">
+                <div class="card-header">
+                    <h5>Cellular Movements of Gastrulation</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3 text-center">
+                            <img src="assets/gifs/invagination.gif" class="movement-gif" alt="Invagination">
+                            <p><strong>Invagination</strong><br>Infolding of a cell sheet</p>
+                        </div>
+                        <div class="col-md-3 text-center">
+                            <img src="assets/gifs/involution.gif" class="movement-gif" alt="Involution">
+                            <p><strong>Involution</strong><br>Inward rolling over a rim</p>
+                        </div>
+                        <div class="col-md-3 text-center">
+                            <img src="assets/gifs/ingression.gif" class="movement-gif" alt="Ingression">
+                            <p><strong>Ingression</strong><br>Individual cell migration</p>
+                        </div>
+                        <div class="col-md-3 text-center">
+                            <img src="assets/gifs/epiboly.gif" class="movement-gif" alt="Epiboly">
+                            <p><strong>Epiboly</strong><br>Spreading & thinning</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Frog Gastrulation Timeline -->
+            <div class="card my-4">
+                <div class="card-header">
+                    <h5>Frog Gastrulation: Step-by-Step</h5>
+                </div>
+                <div class="card-body">
+                    <div class="timeline">
+                        <div class="timeline-step">
+                            <div class="timeline-marker">1</div>
+                            <div class="timeline-content">
+                                <h6>Blastula Stage</h6>
+                                <p>Hollow ball of cells with blastocoel cavity.</p>
+                                <img src="assets/images/gastrulation-stages-1.png" class="img-fluid" alt="Blastula">
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="timeline-marker">2</div>
+                            <div class="timeline-content">
+                                <h6>Blastopore Formation</h6>
+                                <p>Bottle cells form, creating the dorsal lip of the blastopore.</p>
+                                <img src="assets/images/gastrulation-stages-2.png" class="img-fluid" alt="Blastopore">
+                            </div>
+                        </div>
+                        <!-- Add more steps as needed -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PART 2: Induction & Morphogens -->
+        <section id="part2" class="module-section">
+            <h2>Part 2: Molecular Communication - Induction & Morphogens</h2>
+            
+            <!-- Morphogen Gradient Simulator -->
+            <div class="card my-4">
+                <div class="card-header">
+                    <h5>Morphogen Gradient Simulator</h5>
+                </div>
+                <div class="card-body">
+                    <p>Adjust the morphogen source and see how different concentration thresholds create different cell fates (French Flag Model).</p>
+                    <div class="simulator-container">
+                        <div class="morphogen-source">
+                            <label for="morphogenLevel">Morphogen Concentration:</label>
+                            <input type="range" id="morphogenLevel" min="0" max="100" value="50" oninput="updateGradient()">
+                        </div>
+                        <div class="gradient-display mt-3">
+                            <div class="gradient-bar"></div>
+                            <div class="cell-fates d-flex justify-content-between mt-2">
+                                <span class="fate-high">High: Fate A</span>
+                                <span class="fate-medium">Medium: Fate B</span>
+                                <span class="fate-low">Low: Fate C</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BMP Gradient Interactive -->
+            <div class="card my-4">
+                <div class="card-header">
+                    <h5>BMP Gradient in Neural Induction</h5>
+                </div>
+                <div class="card-body">
+                    <div class="bmp-model">
+                        <div class="embryo-cross-section">
+                            <div class="dorsal-side">
+                                <div class="organizer">Organizer<br><small>(Secretes BMP antagonists)</small></div>
+                                <div class="neural-fate">Neural Tissue<br><small>(Low BMP)</small></div>
+                            </div>
+                            <div class="ventral-side">
+                                <div class="epidermal-fate">Epidermis<br><small>(High BMP)</small></div>
+                            </div>
+                        </div>
+                        <div class="bmp-gradient-bar mt-3">
+                            <div class="gradient-label">BMP Concentration</div>
+                            <div class="gradient-visualization"></div>
+                            <div class="gradient-labels d-flex justify-content-between">
+                                <span>Low (Dorsal)</span>
+                                <span>High (Ventral)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PART 3: Application -->
+        <section id="part3" class="module-section">
+            <h2>Part 3: Application - The Noggin-like Problem Set</h2>
+            
+            <div class="card my-4">
+                <div class="card-body">
+                    <p><strong>Scenario:</strong> You discover a new gene, <em>Noggin-like</em>, a BMP antagonist expressed in the organizer.</p>
+                    
+                    <div class="problem" id="problem1">
+                        <h6>Problem 1: Loss of Function</h6>
+                        <p>Predict the phenotype of a <em>Noggin-like</em> knockout frog embryo.</p>
+                        <div class="answer-area">
+                            <textarea class="form-control" rows="3" placeholder="Type your answer here..."></textarea>
+                            <button class="btn btn-sm btn-outline-primary mt-2" onclick="showHint('hint1')">Show Hint</button>
+                            <div id="hint1" class="hint-text mt-2" style="display: none;">
+                                <small class="text-muted">Consider what happens to BMP levels on the dorsal side without the antagonist.</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="problem mt-4" id="problem2">
+                        <h6>Problem 2: Gain of Function</h6>
+                        <p>What would happen if you overexpressed <em>Noggin-like</em> mRNA on the ventral side?</p>
+                        <div class="answer-area">
+                            <textarea class="form-control" rows="3" placeholder="Type your answer here..."></textarea>
+                            <button class="btn btn-sm btn-outline-primary mt-2" onclick="showHint('hint2')">Show Hint</button>
+                            <div id="hint2" class="hint-text mt-2" style="display: none;">
+                                <small class="text-muted">You are creating a new zone of low BMP signaling in an unexpected location.</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-success mt-3" onclick="submitAnswers()">Submit All Answers</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Bootstrap & JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
